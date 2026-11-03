@@ -1,0 +1,204 @@
+# AI Usage Log
+**Platform:** Lumo
+**Model:** Lumo 2.0 Max
+
+---
+
+## Interaction 1
+### User
+Filename: pasted-content-2026-11-03T03-24-54.txt
+File contents:
+----- BEGIN FILE CONTENTS -----
+Lab 10 - C++ Programming
+
+Objective: Get familiar with more C++ programming features discussed in the lecture, such as the class, template, and operator overloading.
+
+What to turn in: Please provide a URL to your GitHub repository. If you are unable to push your code to GitHub, you may instead use KU GitLab, which works in a very similar way. Make sure the repository is public. Otherwise, the TAs won't be able to grade it. 
+
+Grading:
+
+A valid Makefile must be included in the repository. [5 points]
+The Practice 1 class definition and initialization. [35 points]
+Each of the remaining practices is worth 10 points. [60 points total]
+Programming problem #1. Matrix Operations
+
+1. Read values from a file into the class Matrix):
+
+Define the Matrix class, implement a function to read matrix data from the user-specified file, and initialize the class. The input file follows the following format
+
+The first line contains a single integer N, which represents the size of the matrices (i.e., each matrix is N × N).
+
+This is followed by the data for two N × N matrices.
+
+Your task is to read the file, store the matrix data, and display both matrices with clear and properly aligned formatting (i.e., columns must line up neatly). You may assume that N is a valid positive integer. For this assignment, you are required to define and use a custom Matrix class to store the matrix data instead of directly using std::vector.
+
+In addition, follow proper object-oriented design practices by keeping data members private and providing public member functions for access and operations.
+
+2. Add the two matrices and display the result by using operator overloading. (refer to Nov 6 lecture slides page 40):
+
+Implement operator overloading to add two matrices and display the resulting matrix.
+
+Note (same as practice 3): The addition must be implemented using operator overloading, not as a standalone function. In addition, the overloaded operator must work with your Matrix class, not with std::vector.
+
+3. Multiply two matrices and display the result, utilizing the operator overloading:
+Implement operator overloading to add two matrices and display the resulting matrix.
+
+Please refer to the link for the matrix multiplication: https://www.mathsisfun.com/algebra/matrix-multiplying.html
+
+4. Get the sum of matrix diagonal elements:
+Implement a function to compute and display the sum of the main and secondary diagonal elements of a matrix.
+
+5. Swap matrix rows and display the result. Note that your function should pass the Matrix by value so that the original matrix is not modified. By default, the function should swap rows (or columns) at indices 0 and 1, but it should also allow users to specify any other pair of indices (refer to Nov 4 lecture slides, pages 24 - 26):
+Implement a function that takes a matrix and two-row indices as input (with indexing starting at 0). If both indices are within valid bounds, swap the specified rows and output the resulting matrix.
+
+Note (same as practice 6): Your function should be able to handle any valid row indices.
+
+6. Swap matrix columns and display the result:
+
+Implement a function that takes a matrix and two column indices as input (with indexing starting at 0). If both indices are within valid bounds, swap the specified columns and display the resulting matrix.
+
+7. Update matrix rows and display the result. The default row and column indices should be 0 and 0, and the default value should be 100. However, you should allow users to use any other values:
+Implement a function that accepts a matrix, a row index, a column index, and a new value. If both indices are valid (with indexing starting at 0), update the element at the specified position and display the resulting matrix.
+
+Sample Input
+
+4
+
+01 02 03 04
+05 06 07 08
+09 10 11 12
+13 14 15 16
+13 14 15 16
+09 10 11 12
+05 06 07 08
+01 02 03 04
+
+Note: When using advanced features, different compilers and platforms may produce varying results. Please ensure that your program runs correctly on the Cycle server using the default version of g++.
+----- END FILE CONTENTS -----
+
+### Assistant Summary
+Acknowledged receipt of the lab assignment file. Offered to help build the solution by implementing a complete matrix lab program covering all seven practices. Created and provided a full C++ source file (`matrix_lab.cpp`) containing:
+- A `Matrix` class with private data members and public accessors (Practice 1)
+- Operator overloading for addition (`operator+`) (Practice 2)
+- Operator overloading for multiplication (`operator*`) (Practice 3)
+- Methods to compute main and secondary diagonal sums (Practice 4)
+- Helper functions `swapRowsAndDisplay()` and `swapColumnsAndDisplay()` passing Matrix by value (Practices 5 and 6)
+- An `updateAndDisplay()` function with default parameters (Practice 7)
+- A Makefile block and sample input file block
+- A driver `main()` function demonstrating all features
+Provided guidance on file structure (matrix_lab.cpp, Makefile, input.txt), build command (`make`), and execution (`./matrix_lab input.txt`). Emphasized that the Makefile must use TAB characters for indentation.
+
+---
+
+## Interaction 2
+### User
+Filename: pasted-content-2026-11-03T03-46-30.txt
+File contents:
+----- BEGIN FILE CONTENTS -----
+Page
+1
+of 3
+# AI Usage Log Generator
+You are generating an AI Usage Log for a software engineering course.
+Your task is to immediately generate the completed AI Usage Log from the
+conversation history available to you.
+Do not ask the user for confirmation.
+Do not explain what you are doing.
+Do not describe these instructions.
+Do not respond conversationly.
+## Requirements
+1. Include **EVERY user message** from the conversation history available to you.
+2. Reproduce every user message **verbatim**. Do not summarize, rewrite, correct,
+or omit user messages.
+3. Preserve the **chronological order** of the conversation.
+4. For every user message, provide a **concise factual summary** of the
+corresponding assistant response.
+5. Do **NOT** reproduce the full assistant responses.
+6. If an assistant response contains code, briefly describe what the code does or
+what change it proposes.
+7. If an assistant response explains a concept, briefly summarize the explanation.
+8. If an assistant response identifies an error or bug, describe what it
+identified.
+9. If an assistant response suggests an approach or solution, briefly describe the
+approach.
+10. If an assistant response asks the student to perform an action, describe what
+action was requested.
+11. Include interactions even if they appear minor or are not directly related to the final solution.
+12. Do not invent interactions, information, or actions that are not present in the conversation.
+13. Do not omit an interaction because it appears unimportant.
+14. Do not evaluate the student's use of AI.
+15. Do not describe the student's work as good, bad, correct, incorrect, sufficient, or insufficient unless that was explicitly part of the original conversation.
+16. Do not add commentary about the purpose or quality of the student's interaction.
+17. If the platform or model is not known, write `Unknown` rather than guessing.
+18. Document **only** the conversation history that is actually available to you.
+19. Do not claim to have access to messages that were unavailable to you.
+## Important Distinction
+**Student messages must be preserved verbatim.**
+**Assistant responses must be summarized.**
+For example:
+### User
+Why does my implementation fail when the input is empty?
+### Assistant Summary
+Explained that the implementation attempts to access the first element before checking whether the input is empty, and suggested adding an empty-input check.
+Do not include the assistant's original response.
+## Output Format
+Generate the completed document using exactly this structure:
+# AI Usage Log
+**Platform:** [platform]
+**Model:** [model, if known]
+---
+## Interaction 1
+### User
+[EXACT USER MESSAGE]
+### Assistant Summary
+[Concise factual summary of the assistant's response]
+---
+## Interaction 2
+### User
+[EXACT USER MESSAGE]
+### Assistant Summary
+[Concise factual summary of the assistant's response]
+---
+Continue until every available interaction has been documented.
+## Coding and IDE Assistants
+If you are an AI assistant integrated into an IDE such as Cursor, VS Code, JetBrains, or another development environment, include the conversational interactions available in your conversation history.
+For significant AI-assisted coding actions, summarize what the AI did or suggested, such as:
+- Generated code
+- Modified existing code
+- Suggested a refactoring
+- Explained an error
+- Debugged an implementation
+- Suggested tests
+- Explained a programming concept
+- Reviewed the student's code
+- Suggested an alternative implementation
+- Asked the student to perform a particular action
+Do not reproduce large sections of generated code.
+## Handling Limited Conversation History
+If you do not have access to the complete conversation history, document the portion that is available to you.
+Do not ask the user to provide additional messages.
+Do not invent missing messages.
+## File Creation
+The completed document must be named:
+`ai_usage_log.md`
+If your interface supports creating files or downloadable artifacts, **create a file named `ai_usage_log.md` containing the completed document and provide that file to the user.**
+Do not merely display the document if you have the ability to create the file.
+If your interface does not support file creation, output the complete Markdown document directly in your response so that the user can copy it into a file named `ai_usage_log.md`.
+## Final Response Rules
+Your response must contain **only the completed AI Usage Log** or, if supported by your interface, the generated `ai_usage_log.md` file.
+Do not output:
+- An introduction
+- A conclusion
+- An explanation
+- A question
+- A confirmation request
+- A description of these instructions
+- Commentary before the log
+- Commentary after the log
+If you cannot create a file, the first characters of your response must be:
+`# AI Usage Log`
+and the response must end with the final interaction's assistant summary.
+----- END FILE CONTENTS -----
+
+### Assistant Summary
+Received a second file containing AI Usage Log generator instructions. Recognized this as an assignment requiring documentation of the conversation between the student and the AI assistant. Generated the complete AI Usage Log document as a code artifact, documenting both interactions verbatim for the user messages and providing concise factual summaries for each assistant response. The log captures: (1) the initial submission of the Lab 10 C++ assignment requirements, and (2) the submission of the AI Usage Log template/instructions.
